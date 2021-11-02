@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
@@ -16,7 +15,7 @@ public class CatTest {
     Feline feline;
 
     @Test
-    public void getSoundIsMeowTrue() {
+    public void getSoundIsMeow() {
         Cat cat = new Cat(feline);
         String actual = cat.getSound();
         String expected = "Мяу";
@@ -26,8 +25,8 @@ public class CatTest {
     }
 
     @Test
-    public void catEatsPredatorFoodWithMock() throws Exception{
-        Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+    public void catEatsPredatorFood() throws Exception{
+        Feline feline = new Feline();
         Cat cat = new Cat(feline);
         List<String> actual = cat.getFood();
         List<String> expected = List.of("Животные", "Птицы", "Рыба");

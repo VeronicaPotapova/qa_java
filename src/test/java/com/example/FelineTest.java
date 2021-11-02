@@ -8,7 +8,7 @@ import java.util.List;
 public class FelineTest {
 
     @Test
-    public void felineIsPredatorIsTrue() throws Exception{
+    public void felineIsPredator() throws Exception{
         Feline feline = new Feline();
         List<String> actual = feline.eatMeat();
         List<String> expected = List.of("Животные", "Птицы", "Рыба");

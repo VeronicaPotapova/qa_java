@@ -26,12 +26,12 @@ public class LionTest {
     }
 
     @Test
-    public void lionGetKittensOneIsTrue() throws Exception{
+    public void lionGetOneKittens() throws Exception{
+        Feline feline = new Feline();
         Lion lion = new Lion(feline, "Самка");
-        Mockito.when(feline.getKittens()).thenReturn(1);
         int actual = lion.getKittens();
         int expected = 1;
-        Assert.assertEquals("Lion has got one kittens", expected, actual);
+        Assert.assertEquals("Lion has got one kitten", expected, actual);
     }
 
 
